@@ -1,0 +1,22 @@
+<article class="hentry">
+    <div class="row blog-header">
+        <h1 class="entry-title">
+            <!--<a class="dropdown-item" [routerLink]='["/blog/{{post.creationDate.year}}/{{post.creationDate.Month}}/{{post.urlTitle}}"]'>{{post.urlTitle}}</a>-->
+            {{post.urlTitle}}
+        </h1>
+        <h2 class="entry-meta">
+            Posted by <span class="author vcard"><span class="fn"> Atomik Circus </span></span>  on <time class="published" datetime="yyyy-MM-dd 12:00:00">{{post.creationDate}}</time><span style="visibility:hidden;" class="date updated" datetime="yyyy-MM-dd 12:00:01">{{post.creationDate}}</span>
+        </h2>
+    </div>
+    <div class="row blog-article entry-content" [innerHTML]="getPost()">
+    </div>
+
+    <footer>
+        <div class="row blog-footer entry-tags">
+            manage tag
+        </div>
+        <div class="row">
+            <!--Html.Partial("_SocialShare", new AtomikWebSite.SocialShareModel() { Url = string.Format("http://www.atomikcircusmusic.com/blog/{0}/{1}/{2}", Model.CreationDate.Year.ToString(), Model.CreationDate.Month.ToString(), Model.URLTITLE) })-->
+        </div>
+    </footer>
+</article>

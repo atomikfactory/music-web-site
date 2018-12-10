@@ -1,0 +1,48 @@
+.album-row {
+    background: rgba(0,0, 0, .6);
+}
+
+.album{
+    margin-bottom:20px;
+}
+
+.album-desc {
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.album-info {
+    margin-bottom: 40px;
+}
+
+    .album-info a {
+        color: white;
+        cursor: pointer;
+    }
+
+        .album-info a:hover {
+            font-size: xx-large;
+        }
+
+.music-title {
+    font-size: xx-large;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.logo-img {
+    max-width: 100%;
+    max-height: 30px;
+}
+
+album-play {
+    text-decoration: none;
+    margin-left:10px;
+    font-size:medium;
+}
+.album-play a:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
