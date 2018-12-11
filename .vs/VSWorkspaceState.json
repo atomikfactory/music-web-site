@@ -1,6 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\music-web-site",
+    "\\music-web-site\\src",
+    "\\music-web-site\\src\\app",
+    "\\music-web-site\\src\\app\\blog",
+    "\\music-web-site\\src\\app\\media\\picture",
+    "\\music-web-site\\src\\app\\media\\video",
+    "\\music-web-site\\src\\app\\music",
+    "\\music-web-site\\src\\app\\music\\album-list",
+    "\\music-web-site\\src\\app\\music\\music-catalog"
   ],
+  "SelectedNode": "\\music-web-site\\src\\app\\app.component.ts",
   "PreviewInSolutionExplorer": false
 }

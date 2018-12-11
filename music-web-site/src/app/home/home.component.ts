@@ -1,4 +1,4 @@
-import { Component, OnDestroy, Renderer2, OnInit } from '@angular/core';
+import { Component, OnDestroy,  OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 
 
@@ -12,18 +12,19 @@ export class HomeComponent implements OnInit, OnDestroy {
   private subscription;
   private currentImg = 0;
 
+  public currentImgPath: string;
+
   private imgs: string[] = ["/assets/images/home/pexels-photo-145707.jpeg",
     "/assets/images/home/pianoInstrument.jpg",
     "/assets/images/home/mixTable.jpg",
     "/assets/images/home/PionerController.jpg"];
 
-  constructor(private renderer: Renderer2) {
+  constructor() {
 
   }
 
   ngOnInit(): void {
-    //emit value in sequence every 1 second
-    //this.renderer.setStyle(document.body, 'background-image', 'url("https://cache.desktopnexus.com/cropped-wallpapers/263/263726-1920x1080-[DesktopNexus.com].jpg?st=1UYJy_5R4Yv-uMv19O7TjA&e=1543016791")');
+    this.currentImgPath = this.imgs[0];
 
     this.subscription = this.intervallTimer.subscribe(() => this.LoadImage());
 
@@ -42,11 +43,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.currentImg = 0;
     }
 
-    let newImage = this.imgs[this.currentImg];
-
-    this.renderer.addClass(document.body, 'full');
-    this.renderer.setStyle(document.body, 'background-image', 'url("' + newImage + '")');
-
-    console.log(newImage);
+    this.currentImgPath = this.imgs[this.currentImg];
   }
 }

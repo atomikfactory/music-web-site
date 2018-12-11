@@ -44,6 +44,7 @@ import { DownloadComponent } from './download/download.component';
       { path: 'music/album', component: AlbumListComponent },
       { path: 'music/stockmusic', component: MusicCatalogComponent },
       { path: 'blog', component: PostsListComponent },
+      { path: 'download', component: DownloadComponent },
       { path: 'media/picture', component: PictureComponent },
       { path: 'media/video', component: VideoComponent },
       { path: 'connect', component: ConnectComponent },
