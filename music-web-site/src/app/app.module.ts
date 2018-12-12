@@ -20,6 +20,7 @@ import { AlbumListComponent } from './music/album-list/album-list.component';
 import { MusicService } from './shared/model/services/music.service';
 import { DownloadComponent } from './download/download.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
