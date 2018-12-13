@@ -1,44 +1,62 @@
 
-<div id="mc_embed_signup">
-    <form action="https://atomikcircusmusic.us12.list-manage.com/subscribe/post?u=64faf4e5850b6a2654960f0cd&amp;id=f1ab3fd140" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-            <h2>Subscribe to our mailing list</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group">
-                <label for="mce-FNAME">First Name </label>
-                <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-            </div>
-            <div class="mc-field-group">
-                <label for="mce-EMAIL">
-                    Email Address  <span class="asterisk">*</span>
-                </label>
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-            <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>   
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_64faf4e5850b6a2654960f0cd_f1ab3fd140" tabindex="-1" value=""></div>
-            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-        </div>
-    </form>
-</div>
+<!--<div id="mc_embed_signup">
+  <form action="https://atomikcircusmusic.us12.list-manage.com/subscribe/post?u=64faf4e5850b6a2654960f0cd&amp;id=f1ab3fd140" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+      <h2>Subscribe to our mailing list</h2>
+      <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+      <div class="mc-field-group">
+        <label for="mce-FNAME">First Name </label>
+        <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+      </div>
+      <div class="mc-field-group">
+        <label for="mce-EMAIL">
+          Email Address  <span class="asterisk">*</span>
+        </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+      </div>
+      <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_64faf4e5850b6a2654960f0cd_f1ab3fd140" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+  </form>
+</div>-->
 
-
-<p>test : {{conf.artistConfig.name}}</p>
 
 <p class="text-center">
-    <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:23SHrE5UDgvEomWnrjhZBM&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+  <iframe [src]="getSpotifyWidgetUrl()" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+
 </p>
 <p class="text-center">
-    <a href="https://www.facebook.com/atomikcircusmusic" target="_blank" class="social fa fa-facebook facebook"></a>
-    <a href="https://twitter.com/atomikcircus" class="social fa fa-twitter twitter" target="_blank"></a>
-    <a href="https://soundcloud.com/atomikcircus" target="_blank" class="fa fa-soundcloud social soundcloud"></a>
-    <a href="http://google.com/+Atomikcircusmusic" class="social fa fa-google google" target="_blank"></a>
-    <a href="https://www.youtube.com/channel/UC_zLh6BPqlfVfS9VHvsapKQ" class="social fa fa-youtube youtube" target="_blank"></a>
-    <a href="https://www.instagram.com/atomikcircusmusic" class="social fa fa-instagram instagram" target="_blank"></a>
-    <a href="https://vimeo.com/user20830563" class="social fa fa-vimeo vimeo" target="_blank"></a>
-    <a href="https://atomikcircus.bandcamp.com/" target="_blank" class="fa fa-bandcamp social bandcamp"></a>
-    <a href="https://www.jamendo.com/artist/348602/atomik-circus" target="_blank" class="social fa fa-music jamendo"></a>
+  <span *ngIf="conf.facebookUrl">
+    <a href="{{conf.facebookUrl}}" target="_blank" class="social fa fa-facebook facebook"></a>
+  </span>
+  <span *ngIf="conf.twitterUrl">
+    <a href="{{conf.twitterUrl}}" class="social fa fa-twitter twitter" target="_blank"></a>
+  </span>
+  <span *ngIf="conf.soundcloudUrl">
+    <a href="{{conf.soundcloudUrl}}" target="_blank" class="fa fa-soundcloud social soundcloud"></a>
+  </span>
+  <span *ngIf="conf.googlePlusUrl">
+    <a href="{{conf.googlePlusUrl}}" class="social fa fa-google google" target="_blank"></a>
+  </span>
+  <span *ngIf="conf.youtubeUrl">
+    <a href="{{conf.youtubeUrl}}" class="social fa fa-youtube youtube" target="_blank"></a>
+  </span>
+  <span *ngIf="conf.instagramUrl">
+    <a href="{{conf.instagramUrl}}" class="social fa fa-instagram instagram" target="_blank"></a>
+  </span>
+  <span *ngIf="conf.vimeoUrl">
+    <a href="{{conf.vimeoUrl}}" class="social fa fa-vimeo vimeo" target="_blank"></a>
+  </span>
+  <span *ngIf="conf.bandcampUrl">
+    <a href="{{conf.bandcampUrl}}" target="_blank" class="fa fa-bandcamp social bandcamp"></a>
+  </span>
+  <span *ngIf="conf.jamendo">
+    <a href="{{conf.jamendo}}" target="_blank" class="social fa fa-music jamendo"></a>
+  </span>
 </p>
+
 

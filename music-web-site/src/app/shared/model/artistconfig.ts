@@ -8,9 +8,9 @@ export class ArtistConfig {
   soundcloudUrl: string = "https://soundcloud.com/atomikcircus";
   facebookUrl: string = "https://www.facebook.com/atomikcircusmusic";
   instagramUrl: string = "https://www.instagram.com/atomikcircusmusic";
-  twitterUrl: string = "https://www.instagram.com/atomikcircusmusic";
-  bandcampUrl: string = "https://twitter.com/atomikcircus"
-  youtubeUrl: string = "https://atomikcircus.bandcamp.com/";
+  twitterUrl: string = "https://twitter.com/atomikcircus";
+  bandcampUrl: string = "https://atomikcircus.bandcamp.com/"
+  youtubeUrl: string = "https://www.youtube.com/channel/UC_zLh6BPqlfVfS9VHvsapKQ";
   vimeoUrl: string = "https://vimeo.com/user20830563";
   logoImgPath: string = "assets/images/AtomikFinalLogo.png";
   googlePlusUrl: string = '';

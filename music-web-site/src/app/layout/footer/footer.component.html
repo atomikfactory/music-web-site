@@ -26,9 +26,9 @@
       <span *ngIf="conf.jamendoUrl">
         <a href="{{conf.jamendoUrl}}" target="_blank" class="fa gp"><i class="fa fa-music" tool-tip-toggle="tooltip-social" data-original-title="Jamendo"></i></a>
       </span>
-
-      <a href="{{conf.bandcampUrl}}" target="_blank" class="fa gp"><i class="fa fa-bandcamp" tool-tip-toggle="tooltip-social" data-original-title="Bandcamp"></i></a>
-
+      <span *ngIf="conf.bandcampUrl">
+        <a href="{{conf.bandcampUrl}}" target="_blank" class="fa gp"><i class="fa fa-bandcamp" tool-tip-toggle="tooltip-social" data-original-title="Bandcamp"></i></a>
+      </span>
 
     </p>
     <p class="text-center" style="color:#bdb9b9;">

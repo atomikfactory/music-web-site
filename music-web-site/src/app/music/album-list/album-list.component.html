@@ -32,48 +32,48 @@
         </div>
         <div>
           <div *ngIf="album.spotifyLink">
-            <a href="#">
+            <a href="{{album.spotifyLink}}" target="_blank">
               <img class="logo-img" src="/assets/images/logo/spotify.png" /><span class="album-play"><i class="fa fa-play"></i>Play</span>
             </a>
           </div>
           <div *ngIf="album.youtubeLink">
-            <a href="#">
+            <a href="{{album.youtubeLink}}" target="_blank">
               <img class="logo-img" src="/assets/images/logo/youtube.png" /><span class="album-play"><i class="fa fa-play"></i>Play</span>
             </a>
           </div>
           <div *ngIf="album.soundcloudLink">
-            <a href="#">
+            <a href="{{album.soundcloudLink}}" target="_blank">
               <img class="logo-img" src="/assets/images/logo/soundcloud.png" /><span class="album-play"><i class="fa fa-play"></i>Play</span>
             </a>
           </div>
           <div *ngIf="album.ituneLink">
-            <a href="#">
+            <a href="{{album.ituneLink}}" target="_blank">
               <img class="logo-img" src="/assets/images/logo/itunes.png" /><span class="album-play"><i class="fa fa-play"></i>Play</span>
             </a>
           </div>
-          <div *ngIf="album.googlePlayLink">
-            <a href="#">
+          <div *ngIf="album.googlePlayLink" target="_blank">
+            <a href="{{album.googlePlayLink}}">
               <img class="logo-img" src="/assets/images/logo/google-play.png" /><span class="album-play"><i class="fa fa-play"></i>Play</span>
             </a>
           </div>
           <div *ngIf="album.deezer">
-            <a href="#">
+            <a href="{{album.deezer}}" target="_blank">
               <img class="logo-img" src="/assets/images/logo/deezer.png" /><span class="album-play"><i class="fa fa-play"></i>Play</span>
             </a>
           </div>
           <div *ngIf="album.beatportLink">
-            <a href="#">
+            <a href="{{album.beatportLink}}" target="_blank">
               <img class="logo-img" src="/assets/images/logo/beatport.png" /><span class="album-play"><i class="fa fa-play"></i>Play</span>
             </a>
           </div>
           <div *ngIf="album.applemusicLink">
-            <a href="#">
+            <a href="{{album.applemusicLink}}" target="_blank">
               <img class="logo-img" src="/assets/images/logo/apple-music.png" /><span class="album-play"><i class="fa fa-play"></i>Play</span>
             </a>
           </div>
           <div>
             <div *ngIf="album.amazonLink">
-              <a href="#">
+              <a href="{{album.amazonLink}}" target="_blank">
                 <img class="logo-img" src="/assets/images/logo/amazon-music.png" /><span class="album-play"><i class="fa fa-play"></i>Play</span>
               </a>
             </div>
