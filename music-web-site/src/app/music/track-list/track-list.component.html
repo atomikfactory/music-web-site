@@ -1,0 +1,15 @@
+<div class="row" *ngFor="let track of trackList">
+
+
+  <div id="playericons" style="display:block; margin: 20px 20px 20px 20px;">
+    <div id="playerPlaying">
+      <img src="/assets/images/track/{{track.trackCover}}" height="80" width="80" />
+    </div>
+  </div>
+
+  {{track.trackTitle}}
+
+  <div>
+    <app-track-player [track]="track"></app-track-player>
+  </div>
+</div>

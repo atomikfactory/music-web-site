@@ -19,6 +19,11 @@ import { MusicCatalogComponent } from './music/music-catalog/music-catalog.compo
 import { AlbumListComponent } from './music/album-list/album-list.component';
 import { MusicService } from './shared/model/services/music.service';
 import { DownloadComponent } from './download/download.component';
+import { TrackListComponent } from './music/track-list/track-list.component';
+import { CatalogService } from './shared/model/services/catalog.service';
+import { TrackPlayer } from './shared/model/track';
+import { AudioService } from './shared/model/services/audio.service';
+import { TrackPlayerComponent } from './music/track-player/track-player.component';
 
 
 @NgModule({
@@ -34,7 +39,9 @@ import { DownloadComponent } from './download/download.component';
     PictureComponent,
     DownloadComponent,
     ContactComponent,
-    ConnectComponent
+    ConnectComponent,
+    TrackListComponent,
+    TrackPlayerComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +61,7 @@ import { DownloadComponent } from './download/download.component';
     ])
     
   ],
-  providers: [MusicService],
+  providers: [MusicService, CatalogService, AudioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
