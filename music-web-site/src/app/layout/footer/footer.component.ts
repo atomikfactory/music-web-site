@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ArtistConfig } from 'src/app/shared/config/artistconfig';
 
-import { ArtistConfig } from 'src/app/shared/model/artistconfig';
 
 @Component({
   selector: 'app-footer',

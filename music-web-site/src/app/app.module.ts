@@ -17,12 +17,11 @@ import { PictureComponent } from './media/picture/picture.component';
 import { PostsListComponent } from './blog/posts-list/posts-list.component';
 import { MusicCatalogComponent } from './music/music-catalog/music-catalog.component';
 import { AlbumListComponent } from './music/album-list/album-list.component';
-import { MusicService } from './shared/model/services/music.service';
+import { MusicService } from './shared/services/music.service';
 import { DownloadComponent } from './download/download.component';
 import { TrackListComponent } from './music/track-list/track-list.component';
-import { CatalogService } from './shared/model/services/catalog.service';
-import { TrackPlayer } from './shared/model/track';
-import { AudioService } from './shared/model/services/audio.service';
+import { CatalogService } from './shared/services/catalog.service';
+import { AudioService } from './shared/services/audio.service';
 import { TrackPlayerComponent } from './music/track-player/track-player.component';
 
 

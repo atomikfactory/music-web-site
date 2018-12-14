@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Track } from 'src/app/shared/model/track';
-import { AudioService } from 'src/app/shared/model/services/audio.service';
+import { AudioService } from 'src/app/shared/services/audio.service';
 
 @Component({
   selector: 'app-track-player',
@@ -23,6 +23,7 @@ export class TrackPlayerComponent implements OnInit {
   constructor(private audioService: AudioService) { }
 
   ngOnInit() {
+
     this.currentTimeSubscription = this.audioService.currentTime.subscribe(data => {
       if (this.audioService.getCurrentAudioFileName() === this.track.physicalFilePath) {
         this.progressPercent = data;
@@ -57,7 +58,6 @@ export class TrackPlayerComponent implements OnInit {
 
     this.audioService.setTrackPosition(progress);
   }
-
 
   toggleAudio() {
     this.isPlaying = this.audioService.toggleAudio();

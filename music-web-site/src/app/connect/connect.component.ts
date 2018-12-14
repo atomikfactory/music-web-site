@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ArtistConfig } from '../shared/model/artistconfig';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ArtistConfig } from '../shared/config/artistconfig';
 
 @Component({
   selector: 'app-connect',

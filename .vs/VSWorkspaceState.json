@@ -5,14 +5,12 @@
     "\\music-web-site\\src",
     "\\music-web-site\\src\\app",
     "\\music-web-site\\src\\app\\connect",
-    "\\music-web-site\\src\\app\\layout",
-    "\\music-web-site\\src\\app\\layout\\footer",
-    "\\music-web-site\\src\\app\\layout\\top-nav",
+    "\\music-web-site\\src\\app\\shared",
     "\\music-web-site\\src\\app\\shared\\model",
     "\\music-web-site\\src\\app\\shared\\model\\services",
     "\\music-web-site\\src\\assets",
     "\\music-web-site\\src\\assets\\json"
   ],
-  "SelectedNode": "\\music-web-site\\src\\app",
+  "SelectedNode": "\\music-web-site\\src\\app\\connect\\connect.component.ts",
   "PreviewInSolutionExplorer": false
 }

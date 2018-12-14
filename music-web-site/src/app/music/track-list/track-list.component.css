@@ -1,0 +1,22 @@
+/*search bar */
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+input[type="radio"] {
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+}
+
+input:checked + label {
+  font-weight: bold;
+  text-decoration: underline;
+}

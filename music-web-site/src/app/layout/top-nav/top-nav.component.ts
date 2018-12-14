@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArtistConfig } from 'src/app/shared/model/artistconfig';
+import { ArtistConfig } from 'src/app/shared/config/artistconfig';
 
 @Component({
   selector: 'app-top-nav',
