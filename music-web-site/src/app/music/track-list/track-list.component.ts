@@ -4,6 +4,9 @@ import { CatalogService } from 'src/app/shared/services/catalog.service';
 import { SearchOption } from 'src/app/shared/model/searchoption';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CatalogConfig } from 'src/app/shared/config/catalogconfig';
+import { Subject, interval } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-track-list',
@@ -16,6 +19,10 @@ export class TrackListComponent implements OnInit {
   filteredTrackList: Track[];
   trackList: Track[];
   searchBarOptions: SearchOption[];
+
+  searchSubject$ = new Subject<string>();
+  searchString: string;
+
 
   constructor(private catalogService: CatalogService, private sanitizer: DomSanitizer, private conf: CatalogConfig) { }
 
@@ -30,6 +37,10 @@ export class TrackListComponent implements OnInit {
 
       },
       err => console.log(err));
+
+    this.searchSubject$.pipe(debounceTime(300))
+      .subscribe(search => this.filterByAll(search))
+      ;
   }
 
   setSearchBarOption(): void {
@@ -51,12 +62,55 @@ export class TrackListComponent implements OnInit {
   }
 
   onSelectionChange(val: string): void {
-    this.filteredTrackList = this.trackList.filter((track) => track.trackTitle.toLowerCase().startsWith(val));
+    this.filterByName(val);
+
+  }
+
+  inputChanged($event) {
+    this.searchSubject$.next($event);
   }
 
   getTrackWidget(track: Track) {
-    
     return this.sanitizer.bypassSecurityTrustHtml(track.trackLinks.find(t => t.plateform === "Bandcamp").widget);
   }
 
+  private filterByName(val: string): void {
+    this.filteredTrackList = this.trackList.filter((track) => track.trackTitle.toLowerCase().startsWith(val));
+  }
+
+
+  private filterByAll(val: string): void {
+
+    let titleFilterLst = this.trackList.filter((track) => track.trackTitle.toLowerCase().includes(val.toLowerCase()));
+    let tagFilterLst = this.trackList.filter((track) => track.trackTags.toLowerCase().includes(val.toLowerCase()));
+    let mainGenreLst = this.trackList.filter((track) => track.mainGenre !== null && track.mainGenre.toLowerCase().includes(val.toLowerCase())));
+
+
+    let resultArray = titleFilterLst;
+
+    tagFilterLst.forEach((t) => {
+      if (resultArray.some(i => i.id === t.id) === false) {
+        resultArray.push(t);
+      }
+    });
+
+    mainGenreLst.forEach((t) => {
+      if (resultArray.some(i => i.id === t.id) === false) {
+        resultArray.push(t);
+      }
+    });
+
+    this.filteredTrackList = resultArray;
+
+  }
+
+  ngOnDestroy() {
+    try {
+      this.searchSubject$.unsubscribe();
+    }
+    catch (err) {
+
+    }
+
+  }
 }

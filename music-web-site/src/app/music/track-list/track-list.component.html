@@ -1,7 +1,7 @@
 <div class="row" style="margin-top:12px">
   <div class="col-lg-12">
     <div class="input-group" style="height:45px">
-      <input class="form-control search-field placeholder-dark" placeholder="enter anything - use quotes to search phrases" id="s" name="s">
+      <input type="tel" class="form-control search-field placeholder-dark" placeholder="enter anything - use quotes to search phrases" id="s" name="s" [(ngModel)]="searchString" (ngModelChange)="inputChanged($event)">
       <div class="input-group-btn">
         <button type="button" class="btn btn-search search-button" id="Search">
           <i class="fa fa-search"></i>
@@ -26,20 +26,17 @@
 </div>
 
 <div class="row" *ngFor="let track of filteredTrackList">
-  <div id="playericons" style="display:block; margin: 20px 20px 20px 20px;">
+  <div id="playericons" style="display:inline-flex; margin: 20px 20px 20px 20px;">
     <div id="playerPlaying">
       <img src="/assets/images/track/{{track.trackCover}}" height="80" width="80" />
     </div>
-  </div>
-  {{track.trackTitle}}
-
-  <div *ngIf="this.conf.selfHost else widget">
-    <app-track-player [track]="track"></app-track-player>
-  </div>
-  <ng-template #widget>
-    <div [innerHTML]="getTrackWidget(track)"></div>
-  </ng-template>
-  <div>
-
+    {{track.trackTitle}}
+    <div *ngIf="this.conf.selfHost else widget">
+      ye
+      <app-track-player [track]="track"></app-track-player>
+    </div>
+    <ng-template #widget>
+      <!--<div [innerHTML]="getTrackWidget(track)"></div>-->
+    </ng-template>
   </div>
 </div>

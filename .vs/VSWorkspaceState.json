@@ -5,12 +5,16 @@
     "\\music-web-site\\src",
     "\\music-web-site\\src\\app",
     "\\music-web-site\\src\\app\\connect",
-    "\\music-web-site\\src\\app\\shared",
-    "\\music-web-site\\src\\app\\shared\\model",
-    "\\music-web-site\\src\\app\\shared\\model\\services",
+    "\\music-web-site\\src\\app\\home",
+    "\\music-web-site\\src\\app\\music",
+    "\\music-web-site\\src\\app\\music\\album-list",
+    "\\music-web-site\\src\\app\\music\\music-catalog",
+    "\\music-web-site\\src\\app\\music\\track-list",
+    "\\music-web-site\\src\\app\\music\\track-player",
+    "\\music-web-site\\src\\app\\shared\\config",
     "\\music-web-site\\src\\assets",
     "\\music-web-site\\src\\assets\\json"
   ],
-  "SelectedNode": "\\music-web-site\\src\\app\\connect\\connect.component.ts",
+  "SelectedNode": "\\music-web-site\\src\\app\\music\\track-list\\track-list.component.html",
   "PreviewInSolutionExplorer": false
 }
