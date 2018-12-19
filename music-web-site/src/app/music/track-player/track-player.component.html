@@ -1,0 +1,13 @@
+<p>
+  Current Time: {{currentTime}}
+</p>
+<div class="row">
+  <!--<div class="col-sm-2 text-right">
+    <img src="~/Images/Thumb/9.jpg" width="80" height="80" />
+  </div>-->
+  <div class="container" [id]="getContainerId()" (click)="play($event)">
+    <img [src]="getImgWave()" class="image" />
+    <div class="overlay" id="overlay1" [style.width.%]="progressPercent">
+    </div>
+  </div>
+</div>

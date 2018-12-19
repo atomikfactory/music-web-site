@@ -83,7 +83,7 @@ export class TrackListComponent implements OnInit {
 
     let titleFilterLst = this.trackList.filter((track) => track.trackTitle.toLowerCase().includes(val.toLowerCase()));
     let tagFilterLst = this.trackList.filter((track) => track.trackTags.toLowerCase().includes(val.toLowerCase()));
-    let mainGenreLst = this.trackList.filter((track) => track.mainGenre !== null && track.mainGenre.toLowerCase().includes(val.toLowerCase())));
+    let mainGenreLst = this.trackList.filter((track) => track.mainGenre !== null && track.mainGenre.toLowerCase().includes(val.toLowerCase()));
 
 
     let resultArray = titleFilterLst;

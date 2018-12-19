@@ -1,6 +1,11 @@
 # MusicWebSite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
+## Dependency
+
+"node_modules/jquery/dist/jquery.min.js",
+"node_modules/summernote/dist/summernote-lite.js"
+npm install @angular/cdk@latest
 
 ## Development server
 

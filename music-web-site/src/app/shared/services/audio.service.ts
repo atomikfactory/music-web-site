@@ -25,10 +25,7 @@ export class AudioService {
 
     this.audioFileName = audioFileName;
 
-    let srcFile = 'https://ia802508.us.archive.org/5/items/testmp3testfile/mpthreetest.mp3';
-
-
-    this.audio.src = '/assets/library/ready/' + audioFileName;  //srcFile;
+    this.audio.src = audioFileName;
 
     this.audio.oncanplaythrough = () => {
       this.audio.play();
@@ -44,8 +41,13 @@ export class AudioService {
   }
 
   setTrackPosition(progress: number): any {
-    let audioPosition = (progress * this.audio.duration) / 100;
-    this.audio.currentTime = audioPosition;
+    try {
+      let audioPosition = (progress * this.audio.duration) / 100;
+      this.audio.currentTime = audioPosition;
+    }
+    catch{
+      this.audio.currentTime = 0;
+    }
   }
 
   toggleAudio() {

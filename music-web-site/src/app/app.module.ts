@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { PlatformModule } from '@angular/cdk/platform'
+
 
 import { TopNavComponent } from './layout/top-nav/top-nav.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -23,6 +26,7 @@ import { TrackListComponent } from './music/track-list/track-list.component';
 import { CatalogService } from './shared/services/catalog.service';
 import { AudioService } from './shared/services/audio.service';
 import { TrackPlayerComponent } from './music/track-player/track-player.component';
+import { NewBlogPostComponent } from './admin/new-blog-post/new-blog-post.component';
 
 
 @NgModule({
@@ -40,12 +44,14 @@ import { TrackPlayerComponent } from './music/track-player/track-player.componen
     ContactComponent,
     ConnectComponent,
     TrackListComponent,
-    TrackPlayerComponent
+    TrackPlayerComponent,
+    NewBlogPostComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ScrollingModule, PlatformModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'music/album', component: AlbumListComponent },
@@ -56,9 +62,10 @@ import { TrackPlayerComponent } from './music/track-player/track-player.componen
       { path: 'media/video', component: VideoComponent },
       { path: 'connect', component: ConnectComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'admin/newpost', component: NewBlogPostComponent },
       { path: '**', component: HomeComponent },
     ])
-    
+
   ],
   providers: [MusicService, CatalogService, AudioService],
   bootstrap: [AppComponent]

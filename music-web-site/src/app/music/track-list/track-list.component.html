@@ -11,6 +11,8 @@
   </div>
 </div>
 
+
+
 <div class="row" style="margin-top:8px;margin-bottom:8px">
   <ul class="search-filter">
     <li>
@@ -25,18 +27,22 @@
   </ul>
 </div>
 
-<div class="row" *ngFor="let track of filteredTrackList">
-  <div id="playericons" style="display:inline-flex; margin: 20px 20px 20px 20px;">
-    <div id="playerPlaying">
-      <img src="/assets/images/track/{{track.trackCover}}" height="80" width="80" />
+<cdk-virtual-scroll-viewport itemSize="10">
+  <div class="row animated lightSpeedIn item-wrap" *cdkVirtualFor="let track of filteredTrackList">
+    <div  style="display:inline-flex; margin: 20px 20px 20px 20px;">
+      <div id="">
+        <img src="/assets/images/track/{{track.trackCover}}" height="80" width="80" />
+      </div>
+      {{track.trackTitle}}
+      <div *ngIf="this.conf.selfHost else widget">
+        <app-track-player [track]="track"></app-track-player>
+      </div>
+      <ng-template #widget>
+        <div [innerHTML]="getTrackWidget(track)"></div>
+      </ng-template>
     </div>
-    {{track.trackTitle}}
-    <div *ngIf="this.conf.selfHost else widget">
-      ye
-      <app-track-player [track]="track"></app-track-player>
-    </div>
-    <ng-template #widget>
-      <!--<div [innerHTML]="getTrackWidget(track)"></div>-->
-    </ng-template>
   </div>
-</div>
+</cdk-virtual-scroll-viewport>
+
+
+

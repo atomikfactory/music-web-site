@@ -64,7 +64,13 @@ export class TrackPlayerComponent implements OnInit {
   }
 
   getImgWave(): string {
-    return 'assets/library/ready/' + this.track.player.waveImg;
+
+    if (this.track.player.waveImg === null || this.track.player.waveImg.length === 0) {
+      return '/assets/images/track/default-wave-form.png';
+    }
+    else {
+      return '/assets/library/ready/' + this.track.player.waveImg;
+    }
   }
 
   getContainerId(): string {
