@@ -7,6 +7,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 "node_modules/summernote/dist/summernote-lite.js"
 npm install @angular/cdk@latest
 
+npm install --save ngx-lightbox
+
+npm install ng-videosharing-embed
+https://github.com/erost/ng-videosharing-embed
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

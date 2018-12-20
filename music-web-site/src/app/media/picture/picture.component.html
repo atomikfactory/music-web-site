@@ -1,4 +1,24 @@
-<p>
-  Coming Soon!
-</p>
 
+
+<div class="container">
+  <div class="row">
+    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h1 class="gallery-title">Photos</h1>
+    </div>
+    <div class="row gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <button class="btn btn-default filter-button" data-filter="all">All</button>
+      <button class="btn btn-default filter-button" data-filter="all">Atomik Art</button>
+      <button class="btn btn-default filter-button" data-filter="all">Studio In</button>
+      <button class="btn btn-default filter-button" data-filter="all">Studio Out</button>
+      <!--<button class="btn btn-default filter-button" data-filter="" *ngFor="let gallery in galleryLst;"></button>-->
+
+    </div>
+    <br />
+
+    <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-6 filter links gallery_product" *ngFor="let img of _album; let i=index">
+      <img [src]="img.thumb" (click)="open(i)" />
+    </div>
+
+
+  </div>
+</div>

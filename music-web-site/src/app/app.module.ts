@@ -4,7 +4,9 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { PlatformModule } from '@angular/cdk/platform'
+import { PlatformModule } from '@angular/cdk/platform';
+
+import { LightboxModule } from 'ngx-lightbox';
 
 
 import { TopNavComponent } from './layout/top-nav/top-nav.component';
@@ -27,6 +29,7 @@ import { CatalogService } from './shared/services/catalog.service';
 import { AudioService } from './shared/services/audio.service';
 import { TrackPlayerComponent } from './music/track-player/track-player.component';
 import { NewBlogPostComponent } from './admin/new-blog-post/new-blog-post.component';
+import { MediaService } from './shared/services/media.service';
 
 
 @NgModule({
@@ -51,7 +54,9 @@ import { NewBlogPostComponent } from './admin/new-blog-post/new-blog-post.compon
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    ScrollingModule, PlatformModule,
+    ScrollingModule,
+    PlatformModule,
+    LightboxModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'music/album', component: AlbumListComponent },
@@ -67,7 +72,7 @@ import { NewBlogPostComponent } from './admin/new-blog-post/new-blog-post.compon
     ])
 
   ],
-  providers: [MusicService, CatalogService, AudioService],
+  providers: [MusicService, CatalogService, AudioService, MediaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

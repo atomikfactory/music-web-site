@@ -25,6 +25,7 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
+    "ngx-lightbox": "^1.2.0",
     "ngx-summernote": "^0.5.5",
     "rxjs": "~6.2.0",
     "summernote": "^0.8.11",
