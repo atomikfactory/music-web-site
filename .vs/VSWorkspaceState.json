@@ -6,9 +6,9 @@
     "\\music-web-site\\src\\app",
     "\\music-web-site\\src\\app\\media",
     "\\music-web-site\\src\\app\\media\\picture",
-    "\\music-web-site\\src\\app\\media\\video",
-    "\\music-web-site\\src\\app\\music\\track-player",
-    "\\music-web-site\\src\\app\\shared\\config",
+    "\\music-web-site\\src\\app\\music",
+    "\\music-web-site\\src\\app\\shared",
+    "\\music-web-site\\src\\app\\shared\\model",
     "\\music-web-site\\src\\app\\shared\\services",
     "\\music-web-site\\src\\assets",
     "\\music-web-site\\src\\assets\\json"

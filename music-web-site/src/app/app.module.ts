@@ -30,6 +30,7 @@ import { AudioService } from './shared/services/audio.service';
 import { TrackPlayerComponent } from './music/track-player/track-player.component';
 import { NewBlogPostComponent } from './admin/new-blog-post/new-blog-post.component';
 import { MediaService } from './shared/services/media.service';
+import { LoginFormComponent } from './admin/login-form/login-form.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { MediaService } from './shared/services/media.service';
     ConnectComponent,
     TrackListComponent,
     TrackPlayerComponent,
-    NewBlogPostComponent
+    NewBlogPostComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,7 @@ import { MediaService } from './shared/services/media.service';
       { path: 'media/video', component: VideoComponent },
       { path: 'connect', component: ConnectComponent },
       { path: 'contact', component: ContactComponent },
-      { path: 'admin/newpost', component: NewBlogPostComponent },
+      { path: 'admin', component: LoginFormComponent },
       { path: '**', component: HomeComponent },
     ])
 
