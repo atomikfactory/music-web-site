@@ -1,4 +1,12 @@
-<app-top-nav></app-top-nav>
+<ng-container *ngIf="isAdmin; then adminnav; else nav">
+</ng-container>
+
+<ng-template #adminnav>
+  <app-top-nav-admin></app-top-nav-admin>
+</ng-template>
+<ng-template #nav>
+  <app-top-nav></app-top-nav>
+</ng-template>
 
 <div id="wrap">
   <router-outlet></router-outlet>

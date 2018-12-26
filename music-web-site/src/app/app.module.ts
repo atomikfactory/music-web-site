@@ -10,6 +10,7 @@ import { LightboxModule } from 'ngx-lightbox';
 
 
 import { TopNavComponent } from './layout/top-nav/top-nav.component';
+import { TopNavAdminComponent } from './layout/top-nav/top-nav-admin.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 
@@ -38,6 +39,7 @@ import { LoginFormComponent } from './admin/login-form/login-form.component';
     AppComponent,
     HomeComponent,
     TopNavComponent,
+    TopNavAdminComponent,
     FooterComponent,
     AlbumListComponent,
     MusicCatalogComponent,

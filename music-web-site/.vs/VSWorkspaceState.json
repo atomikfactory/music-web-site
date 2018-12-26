@@ -1,16 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src\\app\\blog\\posts-list",
-    "\\src\\app\\music\\album-list",
+    "\\src",
+    "\\src\\app",
     "\\src\\app\\music\\music-catalog",
     "\\src\\app\\music\\track-list",
     "\\src\\app\\music\\track-player",
-    "\\src\\app\\shared\\model",
-    "\\src\\app\\shared\\model\\services",
     "\\src\\assets",
+    "\\src\\assets\\images",
     "\\src\\assets\\json"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\src\\app",
   "PreviewInSolutionExplorer": false
 }
