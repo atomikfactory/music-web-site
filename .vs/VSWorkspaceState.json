@@ -4,15 +4,12 @@
     "\\music-web-site",
     "\\music-web-site\\src",
     "\\music-web-site\\src\\app",
-    "\\music-web-site\\src\\app\\media",
-    "\\music-web-site\\src\\app\\media\\picture",
-    "\\music-web-site\\src\\app\\music",
-    "\\music-web-site\\src\\app\\shared",
+    "\\music-web-site\\src\\app\\admin",
+    "\\music-web-site\\src\\app\\admin\\login-form",
+    "\\music-web-site\\src\\app\\media\\video",
     "\\music-web-site\\src\\app\\shared\\model",
-    "\\music-web-site\\src\\app\\shared\\services",
-    "\\music-web-site\\src\\assets",
-    "\\music-web-site\\src\\assets\\json"
+    "\\music-web-site\\src\\app\\shared\\services"
   ],
-  "SelectedNode": "\\music-web-site\\src\\app\\media\\picture\\picture.component.html",
+  "SelectedNode": "\\music-web-site\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }

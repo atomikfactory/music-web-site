@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -32,6 +34,7 @@ import { TrackPlayerComponent } from './music/track-player/track-player.componen
 import { NewBlogPostComponent } from './admin/new-blog-post/new-blog-post.component';
 import { MediaService } from './shared/services/media.service';
 import { LoginFormComponent } from './admin/login-form/login-form.component';
+import { DialogComponent } from './shared/component/dialog/dialog.component';
 
 
 @NgModule({
@@ -52,7 +55,8 @@ import { LoginFormComponent } from './admin/login-form/login-form.component';
     TrackListComponent,
     TrackPlayerComponent,
     NewBlogPostComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +65,7 @@ import { LoginFormComponent } from './admin/login-form/login-form.component';
     ScrollingModule,
     PlatformModule,
     LightboxModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'music/album', component: AlbumListComponent },
@@ -72,6 +77,7 @@ import { LoginFormComponent } from './admin/login-form/login-form.component';
       { path: 'connect', component: ConnectComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'admin', component: LoginFormComponent },
+      { path: 'admin/new-post', component: NewBlogPostComponent },
       { path: '**', component: HomeComponent },
     ])
 

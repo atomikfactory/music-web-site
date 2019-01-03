@@ -28,10 +28,6 @@ export class PictureComponent implements OnInit {
 
   }
 
-  getAlbumLib() {
-    //let unique = [...new Set<Picture>(_album.map(item => item.album))];
-  }
-
   open(index: number): void {
     // open lightbox
     this._lightBox.open(this._album, index);

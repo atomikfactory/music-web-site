@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor(private router: Router) {
     router.events.subscribe((url: any) => {
-      if (router.url.indexOf('admin') !== -1) { this.isAdmin = true; } else { this.isAdmin = false; }
+      if (router.url.indexOf('admin/') !== -1) { this.isAdmin = true; } else { this.isAdmin = false; }
     });
 
   }
