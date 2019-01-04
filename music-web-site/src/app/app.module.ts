@@ -34,7 +34,8 @@ import { TrackPlayerComponent } from './music/track-player/track-player.componen
 import { NewBlogPostComponent } from './admin/new-blog-post/new-blog-post.component';
 import { MediaService } from './shared/services/media.service';
 import { LoginFormComponent } from './admin/login-form/login-form.component';
-import { DialogComponent } from './shared/component/dialog/dialog.component';
+import { DialogVideoComponent } from './shared/component/dialog/dialog-video.component';
+import { MatDialogModule } from '@angular/material';
 
 
 @NgModule({
@@ -56,7 +57,7 @@ import { DialogComponent } from './shared/component/dialog/dialog.component';
     TrackPlayerComponent,
     NewBlogPostComponent,
     LoginFormComponent,
-    DialogComponent
+    DialogVideoComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +67,7 @@ import { DialogComponent } from './shared/component/dialog/dialog.component';
     PlatformModule,
     LightboxModule,
     BrowserAnimationsModule,
+    MatDialogModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'music/album', component: AlbumListComponent },
@@ -83,6 +85,7 @@ import { DialogComponent } from './shared/component/dialog/dialog.component';
 
   ],
   providers: [MusicService, CatalogService, AudioService, MediaService],
+  entryComponents: [DialogVideoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
